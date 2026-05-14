@@ -1,73 +1,177 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# GRAD-System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Graduation administration management system built using Laravel to streamline the graduation process between students, BAAK, and related departments.
 
-## About Laravel
+## Overview
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+GRAD-System is a web-based graduation management platform designed to help universities manage student graduation requirements more efficiently.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+The system provides separate dashboards and access control for multiple user roles, including:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+* BAAK (Academic Administration)
+* Students
+* Library Staff
+* Finance Staff
+* CSDL Staff
+* Faculty Staff
 
-## Learning Laravel
+Each role has its own responsibilities and permissions within the system to ensure a structured and secure graduation verification workflow.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+---
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+# Main Features
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Multi-Role Authentication & Authorization
 
-## Laravel Sponsors
+* Separate dashboards for each role
+* Role-based access control
+* Secure login system
+* Student accounts generated automatically by BAAK
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## Student Data Management
 
-### Premium Partners
+BAAK can:
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+* Import student data
+* Export student data
+* Edit student information
+* Delete student records
 
-## Contributing
+When student data is imported, the system automatically generates login credentials and sends usernames/passwords directly to each student's email.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Graduation Registration Management
 
-## Code of Conduct
+Students can register for graduation directly through the system.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+BAAK can monitor:
 
-## Security Vulnerabilities
+* Graduation registration status
+* Requirement completion
+* Approval progress from related departments
+* Notes and revision comments from staff
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Related departments (Library, Finance, CSDL, and Faculty) can:
 
-## License
+* Approve requirements
+* Add notes for incomplete submissions
+* View only their own validation section
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Only BAAK has full visibility of all approval statuses.
 
+## Notification System
 
-  # Desain Web Responsif
+Students receive notifications regarding:
 
-  This is a code bundle for Desain Web Responsif. The original project is available at https://www.figma.com/design/FrZKJKHv5KSwHnrHGuzrxZ/Desain-Web-Responsif.
+* Graduation announcements
+* Approval updates
+* Incomplete requirements
+* Staff revision notes
 
-  ## Running the code
+## SKPI Management
 
-  Run `npm i` to install the dependencies.
+Students can submit SKPI data and documents directly through the system.
 
-  Run `npm run dev` to start the development server.
-  
+BAAK can:
+
+* Review documents
+* Edit records
+* Print documents
+* Delete data
+
+## Toga Distribution Tracking
+
+The system tracks students who:
+
+* Have completed graduation requirements
+* Have submitted SKPI
+* Have collected graduation gowns (toga)
+
+## Information & Announcement Management
+
+BAAK can:
+
+* Publish graduation announcements
+* Upload graduation images
+* Share important information with students
+
+## Q&A Management
+
+A built-in Q&A feature allows BAAK to answer frequently asked questions to reduce repetitive inquiries from students.
+
+## Testimonial Moderation
+
+Students can submit feedback regarding their graduation experience.
+
+Testimonials are reviewed by BAAK before being published.
+
+## Student Dashboard
+
+Students can:
+
+* View graduation information
+* Register for graduation
+* Submit SKPI
+* Read requirements and announcements
+* Receive notifications
+* Update profile information
+* Submit testimonials
+* Contact BAAK via WhatsApp or Email
+
+---
+
+# Technologies Used
+
+* Laravel
+* PHP
+* MySQL
+* Blade Template
+* Bootstrap
+* JavaScript
+* HTML & CSS
+
+---
+
+# System Roles
+
+| Role          | Responsibilities                                  |
+| ------------- | ------------------------------------------------- |
+| BAAK          | Full graduation management and monitoring         |
+| Student       | Registration, SKPI submission, profile management |
+| Library Staff | Library requirement approval                      |
+| Finance Staff | Financial requirement approval                    |
+| CSDL Staff    | CSDL requirement approval                         |
+| Faculty Staff | Faculty requirement approval                      |
+
+---
+
+# Key Highlights
+
+* Multi-role dashboard system
+* Centralized graduation verification workflow
+* Automated email credential delivery
+* Real-time requirement tracking
+* Notification and approval management
+* Document management system
+* Responsive web interface
+
+---
+
+# Screenshots
+
+## Login Page
+
+![Login Page](screenshots/login-page.png)
+
+## Admin Dashboard
+
+![Admin Dashboard](screenshots/admin-dashboard.png)
+
+## Student Dashboard
+
+![Student Dashboard](screenshots/student-dashboard.png)
+
+---
+
+# Developer
+
+Developed by Liana Syifa Fauzia.
