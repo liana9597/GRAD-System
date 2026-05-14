@@ -172,6 +172,10 @@ Students can:
 
 ---
 
-# Developer
+# Team Contribution
 
-Developed by Liana Syifa Fauzia.
+- Liana Syifa Fauzia — Full-stack development
+- Ni'mas Subang Asih — Development support
+- Hani Ayu Fadila — Testing & feedback
+- Ririn Dwi Ariyanti — Testing & feedback
+- Wulan Saputri — Testing & feedback
