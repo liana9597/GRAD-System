@@ -1,181 +1,115 @@
-# GRAD-System
+# 🌐 Language Options:
+**English** | [Bahasa Indonesia](README-id.md)
 
-Graduation administration management system built using Laravel to streamline the graduation process between students, BAAK, and related departments.
+---
+
+# GRAD-System (Graduation Data Management System)
+
+A centralized graduation and yudisium administration management platform built on top of the **Laravel Framework**. This system bridges, automates, and accelerates the validation workflow of graduation prerequisites in *real-time* between graduating students, the BAAK division, and multi-departmental verifiers.
 
 ## Overview
 
-GRAD-System is a web-based graduation management platform designed to help universities manage student graduation requirements more efficiently.
+GRAD-System replaces conventional, time-consuming university graduation bureaucraices with a modern unified digital solution. 
 
-The system provides separate dashboards and access control for multiple user roles, including:
+The application implements a strict *Multi-role Access Control (RBAC)* mechanism, tailoring dedicated operational workspaces for 6 distinct roles:
+* **BAAK (Academic Administration & Student Affairs):** Acts as the Super Admin overseeing the entire graduation pipeline.
+* **Students:** Submit necessary documentation and track validation progress in real-time.
+* **Library Staff, Finance Staff, CSDL Staff, and Faculty Staff:** Act as specialized internal departmental verifiers.
 
-* BAAK (Academic Administration)
-* Students
-* Library Staff
-* Finance Staff
-* CSDL Staff
-* Faculty Staff
-
-Each role has its own responsibilities and permissions within the system to ensure a structured and secure graduation verification workflow.
+Each role operates within an isolated workspace, guaranteeing a faster, highly structured, transparent, and secure document verification workflow.
 
 ---
 
 # Main Features
 
-## Multi-Role Authentication & Authorization
+## Multi-Role Authentication & Route Authorization
+* Automated provisioning of unique dashboard modules customized for 6 different user privileges.
+* Route protection enforced via strict role-based *Laravel Middleware*.
+* **Automated Account Provisioning:** Student login credentials are automatically generated in batches by the system when BAAK imports student rosters.
 
-* Separate dashboards for each role
-* Role-based access control
-* Secure login system
-* Student accounts generated automatically by BAAK
+## 📊 Roster & Data Management (BAAK Group)
+* Instantly import or export graduating student datasets via spreadsheet formats.
+* Integrated with *Email Automation* to dynamically dispatch login credentials (*username* & *password*) directly to individual student emails upon a successful roster import.
 
-## Student Data Management
+## 🎓 Graduation Registration & Yudisium Pipeline
+Students can register for graduation and upload necessary prerequisite documents independently through their portal.
+* **Real-Time Tracking Engine:** Enables BAAK to monitor graduation metrics, document completion rates, and cross-departmental approval workflows through live data feeds.
+* **Isolated Verification Workspaces:** Verifiers from the Library, Finance, CSDL, and Faculty offices can directly validate requirements or attach revision notes if a submission is incomplete.
+* Technical isolation ensures verifiers can only interact with their respective department's fields, while BAAK retains master administrative oversight.
 
-BAAK can:
+## 🔔 Instant Notification Subsystem
+Students receive immediate, actionable notifications directly on their dashboard regarding graduation schedule releases, requirement validation updates, and specific revision notes from checking staff.
 
-* Import student data
-* Export student data
-* Edit student information
-* Delete student records
+## 📄 SKPI (Diploma Supplement) Document Management
+* Students can input accomplishments and upload digital evidence for their SKPI portfolio directly into the system.
+* Provides BAAK with comprehensive review dashboards, record-editing capabilities, data-cleaning tools, and an instant print engine for verified SKPI forms.
 
-When student data is imported, the system automatically generates login credentials and sends usernames/passwords directly to each student's email.
+## 📦 Gown Distribution Logistical Tracker (Toga Tracker)
+A digital logistics module to track graduation gown collections. The system locks and enforces toga eligibility, ensuring collection is only unlocked for students who have successfully cleared all institutional checkboxes and SKPI validations.
 
-## Graduation Registration Management
+## 📣 Information Broadcast & Announcement Panel
+Empowers BAAK to publish official yudisium notices, export visual metrics charts on graduation cohorts, and push critical circulars to the student network.
 
-Students can register for graduation directly through the system.
+## ❓ Interactive Q&A Support Module
+A built-in *Frequently Asked Questions* (FAQ) manager allowing BAAK to handle recurrent queries inside the app, minimizing repetitive inquiries sent to administrative staff.
 
-BAAK can monitor:
+## 📝 Testimonial Moderation Workflow
+Graduates can submit feedback and reflections on their academic journey. Submissions are piped to a secure BAAK moderation queue for approval before publishing publicly.
 
-* Graduation registration status
-* Requirement completion
-* Approval progress from related departments
-* Notes and revision comments from staff
-
-Related departments (Library, Finance, CSDL, and Faculty) can:
-
-* Approve requirements
-* Add notes for incomplete submissions
-* View only their own validation section
-
-Only BAAK has full visibility of all approval statuses.
-
-## Notification System
-
-Students receive notifications regarding:
-
-* Graduation announcements
-* Approval updates
-* Incomplete requirements
-* Staff revision notes
-
-## SKPI Management
-
-Students can submit SKPI data and documents directly through the system.
-
-BAAK can:
-
-* Review documents
-* Edit records
-* Print documents
-* Delete data
-
-## Toga Distribution Tracking
-
-The system tracks students who:
-
-* Have completed graduation requirements
-* Have submitted SKPI
-* Have collected graduation gowns (toga)
-
-## Information & Announcement Management
-
-BAAK can:
-
-* Publish graduation announcements
-* Upload graduation images
-* Share important information with students
-
-## Q&A Management
-
-A built-in Q&A feature allows BAAK to answer frequently asked questions to reduce repetitive inquiries from students.
-
-## Testimonial Moderation
-
-Students can submit feedback regarding their graduation experience.
-
-Testimonials are reviewed by BAAK before being published.
-
-## Student Dashboard
-
-Students can:
-
-* View graduation information
-* Register for graduation
-* Submit SKPI
-* Read requirements and announcements
-* Receive notifications
-* Update profile information
-* Submit testimonials
-* Contact BAAK via WhatsApp or Email
+## Student Hub Dashboard
+An intuitive, self-service dashboard for students to register for yudisium, submit SKPI records, view public notices, update profile fields, track live verification timelines, and access direct communication shortcuts to BAAK via WhatsApp or Email.
 
 ---
 
 # Technologies Used
 
-* Laravel
-* PHP
-* MySQL
-* Blade Template
-* Bootstrap
-* JavaScript
-* HTML & CSS
+* **Backend Architecture:** Laravel (PHP)
+* **Database Management:** MySQL
+* **Frontend Ecosystem:** Blade Template Engine, Bootstrap, JavaScript, HTML5 & CSS3
 
 ---
 
-# System Roles
+# System Roles & Privileges
 
-| Role          | Responsibilities                                  |
-| ------------- | ------------------------------------------------- |
-| BAAK          | Full graduation management and monitoring         |
-| Student       | Registration, SKPI submission, profile management |
-| Library Staff | Library requirement approval                      |
-| Finance Staff | Financial requirement approval                    |
-| CSDL Staff    | CSDL requirement approval                         |
-| Faculty Staff | Faculty requirement approval                      |
+| User Role | Technical Scope & Responsibilities |
+| --------- | ------------------------------------------------------------------------- |
+| BAAK      | Comprehensive lifecycle control, cross-departmental monitoring, data moderation |
+| Student   | Yudisium registration, document uploads, portfolio & SKPI data management |
+| Library   | Validates library clearance and thesis/dissertation final deposits |
+| Finance   | Validates tuition settlement, institutional clearance, and graduation fees|
+| CSDL      | Validates tracer study submissions and career-center records |
+| Faculty   | Validates academic evaluation requirements and faculty-level paperwork |
 
 ---
 
 # Key Highlights
 
-* Multi-role dashboard system
-* Centralized graduation verification workflow
-* Automated email credential delivery
-* Real-time requirement tracking
-* Notification and approval management
-* Document management system
-* Responsive web interface
+* Engineered a sophisticated, deeply integrated multi-role dashboard architecture.
+* Introduced a centralized, frictionless document verification workflow.
+* Seamless distribution of auto-generated credentials utilizing automated email pipelines.
+* Live tracking engine monitoring cross-departmental document approval states.
+* Highly structured, relational file and data management system.
+* Fully responsive web-layout scaling fluidly across modern screen resolutions.
 
 ---
 
 # Screenshots
 
-## Login Page
-
+## Authentication Gateway
 ![Login Page](screenshots/login-page.png)
 
-## Admin Dashboard
-
+## Master BAAK Administration Console
 ![Admin Dashboard](screenshots/admin-dashboard.png)
 
-## Student Dashboard
-
+## Interactive Student Dashboard
 ![Student Dashboard](screenshots/student-dashboard.png)
 
 ---
 
-# Team Contribution
+# Engineering Team Contribution
 
-- Liana Syifa Fauzia — Full-stack development
-- Ni'mas Subang Asih — Development support
-- Hani Ayu Fadila — Testing & feedback
-- Ririn Dwi Ariyanti — Testing & feedback
-- Wulan Saputri — Testing & feedback
+- **Liana Syifa Fauzia:** Lead Full-Stack Engineer (Architected backend layers, designed relational databases, programmed core system logic, built email automation pipelines, and led internal dashboard frontend engineering).
+- **Ni'mas Subang Asih:** Development Support Specialist.
+- **Hani Ayu Fadila:** Software Quality Assurance (QA) Analyst — managed system behavior testing and technical feedback cycles.
+- **Ririn Dwi Ariyanti:** Software Quality Assurance (QA) Analyst & User Acceptance Testing (UAT) Support.
+- **Wulan Saputri:** System Deployment Tester & Compliance Documentation Lead.
